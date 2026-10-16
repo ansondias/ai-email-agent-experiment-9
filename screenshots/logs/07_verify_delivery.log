@@ -1,0 +1,21 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % python3 verify_delivery.py
+2 email(s) marked SENT in memory.json; checking Gmail over IMAP...
+
+#1 → kunal.meher@atlasuniversity.edu.in   Message-ID <179214010110.43100.5818616068468493683@email-agent.local>
+    "[Gmail]/Sent Mail"  FOUND  Date: Fri, 16 Oct 2026 14:11:41 +0530
+                                From: Anson Dias <ansondias18@gmail.com>
+                                To:   "Dr. Kunal Meher" <kunal.meher@atlasuniversity.edu.in>
+                                Subj: Experiment 9 AI Email Agent Completion
+    INBOX                not found
+
+#2 → ansondias18@gmail.com   Message-ID <179214014489.43126.10943104474720029494@email-agent.local>
+    "[Gmail]/Sent Mail"  FOUND  Date: Fri, 16 Oct 2026 14:12:24 +0530
+                                From: Anson Dias <ansondias18@gmail.com>
+                                To:   Anson Dias <ansondias18@gmail.com>
+                                Subj: Experiment 9 AI Email Agent Completion
+    INBOX                FOUND  Date: Fri, 16 Oct 2026 14:12:24 +0530
+                                From: Anson Dias <ansondias18@gmail.com>
+                                To:   Anson Dias <ansondias18@gmail.com>
+                                Subj: Experiment 9 AI Email Agent Completion
+
+

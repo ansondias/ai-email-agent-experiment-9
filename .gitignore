@@ -1,0 +1,9 @@
+# secrets
+.env
+# runtime state (recreated by the agent)
+data/memory*.json
+data/drafts_seen.json
+# local tooling / OS
+__pycache__/
+.claude/
+.DS_Store

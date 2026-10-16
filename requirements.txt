@@ -1,0 +1,6 @@
+# The agent itself uses only the Python standard library (3.10+).
+# Local LLM: Ollama with `ollama pull qwen2.5:7b`.
+#
+# Only needed to regenerate the report figures / document:
+Pillow
+python-docx

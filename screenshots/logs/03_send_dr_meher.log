@@ -1,0 +1,46 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % python3 run_demo.py 1
+AI Email Agent  ·  Experiment 9  ·  LLM + Memory + Tools + Orchestration
+LLM: qwen2.5:7b (Ollama, local)   Sender: ansondias18@gmail.com   Mode: confirm before send
+
+You ▸ Send an email to Dr. Meher saying that my Experiment 9 AI Email Agent is complete. It understands instructions with a local LLM, looks up contacts, drafts the email, asks for confirmation before sending and remembers past interactions. Mention that this email itself was drafted and sent by the agent. Keep it formal.
+   [UNDERSTAND] intent=send_email  recipients=['Dr. Meher']  tone=formal
+                key points: Experiment 9 AI Email Agent complete, local LLM, drafts emails, asks for confirmation, remembers past interactions, drafted and sent this email itself.
+   [TOOL]       recall_recent_emails(count=1)
+                → memory is empty
+   [TOOL]       lookup_contact(name='Dr. Meher')
+                → FOUND Dr. Kunal Meher <kunal.meher@atlasuniversity.edu.in>  (Course instructor, LLM and Agentic AI)
+   [TOOL]       send_email(to_email='kunal.meher@atlasuniversity.edu.in', subject='Experiment 9 AI Email Agent Completion', body='Subject: Experiment 9 AI Email Agent Completion\n\nDear Dr....', to_name='Dr. Kunal Meher')
+   [DRAFT]      LLM composed the email (88 words)
+   [GUARDRAIL]  recipient verified ✔ (contact store) — human confirmation required
+   ┌─ DRAFT EMAIL ────────────────────────────────────────────────────────
+   │ From:    Anson Dias <ansondias18@gmail.com>
+   │ To:      Dr. Kunal Meher <kunal.meher@atlasuniversity.edu.in>   ✔ verified (contact store)
+   │ Subject: Experiment 9 AI Email Agent Completion
+   ├──────────────────────────────────────────────────────────────────────
+   │ Dear Dr. Meher,
+   │ 
+   │ I am pleased to inform you that my Experiment 9 AI Email Agent is now
+   │ complete.
+   │ 
+   │ This agent has several capabilities:
+   │ - It understands instructions with a local LLM (Language Model).
+   │ - It looks up contacts and remembers past interactions.
+   │ - It drafts emails, asks for confirmation before sending, and remembers its
+   │ own actions.
+   │ 
+   │ The latest action was drafting and sending this email itself.
+   │ 
+   │ Thank you for your guidance and support throughout the project.
+   │ 
+   │ Best regards,
+   │ Anson Dias
+   │ TY-BTech AIML (SEM VI), APP ID 2307040
+   └──────────────────────────────────────────────────────────────────────
+   ⚠  Sending is irreversible. Send this email? [y]es / [n]o / or type changes ▸ y
+   [SEND]       ✔ smtp.gmail.com:465 accepted the message
+                Message-ID <179214010110.43100.5818616068468493683@email-agent.local>
+   [MEMORY]     saved as email #1 in memory.json
+Agent ▸ Sent your email to Dr. Kunal Meher.
+        (69.7 s · 5 LLM calls · 3 tool calls)
+
+

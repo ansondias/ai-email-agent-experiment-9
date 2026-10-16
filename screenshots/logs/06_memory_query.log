@@ -1,0 +1,22 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % python3 run_demo.py 4
+AI Email Agent  ·  Experiment 9  ·  LLM + Memory + Tools + Orchestration
+LLM: qwen2.5:7b (Ollama, local)   Sender: ansondias18@gmail.com   Mode: confirm before send
+
+You ▸ What emails have I sent so far?
+   [UNDERSTAND] intent=query_history  recipients=[]  tone=formal
+                key points: List of recent emails sent
+                refers to a previous email → will use memory
+   [TOOL]       recall_recent_emails(count=5)
+                → #3 [DECLINED] to John Doe: "Reminder: Project Meeting at 10 AM Tomorrow"
+                → #2 [SENT] to Anson Dias: "Experiment 9 AI Email Agent Completion"
+                → #1 [SENT] to Dr. Kunal Meher: "Experiment 9 AI Email Agent Completion"
+Agent ▸ You have sent three emails so far:
+
+1. An email to yourself on October 16, 2026, at 14:12:28 (Subject: Experiment 9 AI Email Agent Completion).
+2. An email to Dr. Kunal Meher on October 16, 2026, at 14:11:44 (Subject: Experiment 9 AI Email Agent Completion).
+3. A reminder about tomorrow's project meeting that was declined and not sent.
+
+The latest action was drafting and sending the email to yourself regarding the completion of your Experiment 9 AI Email Agent.
+        (61.0 s · 3 LLM calls · 1 tool calls)
+
+

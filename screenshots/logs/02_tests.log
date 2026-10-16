@@ -1,0 +1,16 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % python3 -m unittest -v
+test_address_typed_by_user_is_accepted ... ok
+test_agent_loop_recovers_after_blocked_hallucination ... ok
+test_declined_email_is_not_sent_or_retried ... ok
+test_duplicate_send_in_one_turn_is_prevented ... ok
+test_hallucinated_address_is_blocked ... ok
+test_lookup_handles_titles_aliases_and_typos ... ok
+test_memory_persists_across_restarts ... ok
+test_resend_reuses_memory_and_adapts_greeting ... ok
+test_save_contact_refuses_invented_address ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.008s
+
+OK
+

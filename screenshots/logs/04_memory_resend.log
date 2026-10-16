@@ -1,0 +1,45 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % python3 run_demo.py 2
+AI Email Agent  ·  Experiment 9  ·  LLM + Memory + Tools + Orchestration
+LLM: qwen2.5:7b (Ollama, local)   Sender: ansondias18@gmail.com   Mode: confirm before send
+
+You ▸ Send the same email to me too.
+   [UNDERSTAND] intent=resend_previous  recipients=['Dr. Meher', 'yourself']  tone=formal
+                key points: Experiment 9 AI Email Agent complete, drafts emails, remembers past interactions, sent this email itself.
+                refers to a previous email → will use memory
+   [TOOL]       recall_recent_emails(count=1)
+                → #1 [SENT] to Dr. Kunal Meher: "Experiment 9 AI Email Agent Completion"
+   [TOOL]       resend_email(email_id=1, to_name='Anson Dias', to_email='ansondias18@gmail.com')
+   [DRAFT]      reusing email #1 from long-term memory (greeting adapted)
+   [GUARDRAIL]  recipient verified ✔ (contact store) — human confirmation required
+   ┌─ DRAFT EMAIL ────────────────────────────────────────────────────────
+   │ From:    Anson Dias <ansondias18@gmail.com>
+   │ To:      Anson Dias <ansondias18@gmail.com>   ✔ verified (contact store)
+   │ Subject: Experiment 9 AI Email Agent Completion
+   ├──────────────────────────────────────────────────────────────────────
+   │ Dear Anson,
+   │ 
+   │ I am pleased to inform you that my Experiment 9 AI Email Agent is now
+   │ complete.
+   │ 
+   │ This agent has several capabilities:
+   │ - It understands instructions with a local LLM (Language Model).
+   │ - It looks up contacts and remembers past interactions.
+   │ - It drafts emails, asks for confirmation before sending, and remembers its
+   │ own actions.
+   │ 
+   │ The latest action was drafting and sending this email itself.
+   │ 
+   │ Thank you for your guidance and support throughout the project.
+   │ 
+   │ Best regards,
+   │ Anson Dias
+   │ TY-BTech AIML (SEM VI), APP ID 2307040
+   └──────────────────────────────────────────────────────────────────────
+   ⚠  Sending is irreversible. Send this email? [y]es / [n]o / or type changes ▸ y
+   [SEND]       ✔ smtp.gmail.com:465 accepted the message
+                Message-ID <179214014489.43126.10943104474720029494@email-agent.local>
+   [MEMORY]     saved as email #2 in memory.json
+Agent ▸ Sent your email to Dr. Kunal Meher and yourself.
+        (36.4 s · 3 LLM calls · 2 tool calls)
+
+

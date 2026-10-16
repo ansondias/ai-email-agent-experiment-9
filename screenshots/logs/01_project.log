@@ -1,0 +1,46 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % ls -1 *.py data/ tests/*.py
+agent.py
+config.py
+contacts.py
+llm.py
+mailer.py
+make_screenshots.py
+memory.py
+run_demo.py
+setup_credentials.py
+tests/__init__.py
+tests/test_guardrails.py
+tools.py
+ui.py
+
+data/:
+contacts.json
+drafts_seen.json
+
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % cat data/contacts.json
+[
+  {
+    "name": "Dr. Kunal Meher",
+    "email": "kunal.meher@atlasuniversity.edu.in",
+    "aliases": ["Kunal Meher", "Dr. Meher", "Prof. Meher", "Kunal sir"],
+    "relation": "Course instructor, LLM and Agentic AI"
+  },
+  {
+    "name": "Anson Dias",
+    "email": "ansondias18@gmail.com",
+    "aliases": ["me", "myself", "Anson", "self"],
+    "relation": "Owner of this agent"
+  }
+]
+
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % ollama list | grep -E 'NAME|qwen2.5'
+NAME               ID              SIZE      MODIFIED     
+qwen2.5:7b         845dbda0ea48    4.7 GB    4 months ago    
+
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % grep -nE '^(MODEL|CONFIRM_BEFORE_SEND|DRY_RUN|SMTP_HOST|SMTP_PORT) ' config.py
+36:MODEL = os.environ.get("AGENT_MODEL", "qwen2.5:7b")
+46:CONFIRM_BEFORE_SEND = _flag("CONFIRM_BEFORE_SEND", True)
+48:DRY_RUN = _flag("DRY_RUN", False)
+53:SMTP_HOST = "smtp.gmail.com"
+54:SMTP_PORT = 465
+

@@ -1,0 +1,18 @@
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % jq -c '.emails[] | {id, time, status, to_email, subject}' data/memory.json
+{"id":1,"time":"2026-10-16T14:11:44","status":"SENT","to_email":"kunal.meher@atlasuniversity.edu.in","subject":"Experiment 9 AI Email Agent Completion"}
+{"id":2,"time":"2026-10-16T14:12:28","status":"SENT","to_email":"ansondias18@gmail.com","subject":"Experiment 9 AI Email Agent Completion"}
+{"id":3,"time":"2026-10-16T14:14:08","status":"DECLINED","to_email":"john.doe@example.com","subject":"Reminder: Project Meeting at 10 AM Tomorrow"}
+
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % jq -c '.turns[] | {role, content: .content[0:70]}' data/memory.json | head -6
+{"role":"user","content":"Send an email to Dr. Meher saying that my Experiment 9 AI Email Agent "}
+{"role":"assistant","content":"Sent your email to Dr. Kunal Meher."}
+{"role":"user","content":"Send the same email to me too."}
+{"role":"assistant","content":"Sent your email to Dr. Kunal Meher and yourself."}
+{"role":"user","content":"Email John a reminder about tomorrow's 10 AM project meeting."}
+{"role":"assistant","content":"I need to confirm the email address for John before sending the remind"}
+
+[1;32mansondias@Ansons-MacBook-Pro[0m [1;34mexperiment-9-email-agent[0m % jq -c '.[] | {name, email}' data/contacts.json
+{"name":"Dr. Kunal Meher","email":"kunal.meher@atlasuniversity.edu.in"}
+{"name":"Anson Dias","email":"ansondias18@gmail.com"}
+{"name":"John Doe","email":"john.doe@example.com"}
+

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Dr. Kunal Meher",
+    "email": "kunal.meher@atlasuniversity.edu.in",
+    "aliases": ["Kunal Meher", "Dr. Meher", "Prof. Meher", "Kunal sir"],
+    "relation": "Course instructor, LLM and Agentic AI"
+  },
+  {
+    "name": "Anson Dias",
+    "email": "ansondias18@gmail.com",
+    "aliases": ["me", "myself", "Anson", "self"],
+    "relation": "Owner of this agent"
+  }
+]
